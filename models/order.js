@@ -7,10 +7,6 @@ const OrderShema = new mongoose.Schema(
             ref: 'User',
             required: true,
         }, 
-        car: {
-            type: String,
-            required: true,
-        },
         description: {
             type: String,
             required: true,
