@@ -39,14 +39,14 @@ export const createMachineValidation = [
     body('name', 'Product name is required').notEmpty(),
     body('model', 'Product description is required').notEmpty(),
     body('imageUrl', 'Invalid URL format for image').optional(),
-    body('condition', 'Invalid condition').isIn(['working', 'out of order']),
+    body('condition', 'Invalid condition').isBoolean(),
 ];
 
 export const updateMachineValidation = [
     body('name', 'Product name is required').optional().notEmpty(),
     body('model', 'Product description is required').optional().notEmpty(),
     body('imageUrl', 'Invalid URL format for image').optional(),
-    body('condition', 'Invalid condition').optional().isIn(['working', 'out of order']),
+    body('condition', 'Invalid condition').optional().isBoolean(),
 ];
 
 //order validation

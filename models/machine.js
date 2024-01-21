@@ -12,9 +12,9 @@ const MachineShema = new mongoose.Schema(
         },
         imageUrl: String,
         condition: {
-            type: String,
+            type: Boolean,
             required: true,
-            enum: ['working', 'out of order'] 
+            default: false, 
         }
     },
     {
